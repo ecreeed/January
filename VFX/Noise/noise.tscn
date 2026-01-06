@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://xe5jyxnge1q0"]
+
+[ext_resource type="Shader" uid="uid://hpbf1shfhp2i" path="res://VFX/Noise/noise.gdshader" id="1_b0cgg"]
+[ext_resource type="Script" uid="uid://clywcuxweyvaa" path="res://VFX/Noise/noise.gd" id="2_2a8pj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mdi1e"]
+shader = ExtResource("1_b0cgg")
+shader_parameter/fx_pos = Vector2(0, 0)
+shader_parameter/player_pos = Vector2(0, 0)
+shader_parameter/player_dir = Vector2(0, 0)
+shader_parameter/aspect = Vector2(100, 100)
+shader_parameter/color = Vector3(0, 0, 0)
+
+[node name="Noise" type="ColorRect"]
+material = SubResource("ShaderMaterial_mdi1e")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_2a8pj")

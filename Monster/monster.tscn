@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ggx2g0w58dfh"]
+
+[ext_resource type="Script" uid="uid://vvcg2kc630uh" path="res://Monster/monster.gd" id="1_4x6lt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ev2bw"]
+
+[node name="Monster" type="CharacterBody2D"]
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_4x6lt")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ev2bw")
+
+[node name="Pathfind" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 30.0
