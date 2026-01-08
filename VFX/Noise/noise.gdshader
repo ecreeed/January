@@ -9,12 +9,11 @@ uniform vec3 color = vec3(0.0,0.0,0.0);
 const vec2 seed_vec = vec2(15.15, 25.15);
 const float dot_seed = 25.15;
 const float sin_seed = 5000.0;
-const float fx_seed = 14.7;
 
 // Other Constants
 const float fx_size = 10.0;
 const float alpha = 0.55;
-const float fx_alpha = 0.02;
+const float fx_alpha = 0.00;
 
 
 //// FUNCTIONS ////
@@ -31,7 +30,7 @@ float when_gt(float a, float b) {
 
 // Returns float bool in range
 float check_fx(vec2 fx, vec2 pixel) {
-	return when_gt(fx_size, distance(fx, mult_vec(pixel, aspect) ) ) * fx_seed;
+	return when_gt(fx_size, distance(fx, mult_vec(pixel, aspect) ) ) * (fx_pos.x+fx_pos.y);
 }
 
 // Equation to generate random value

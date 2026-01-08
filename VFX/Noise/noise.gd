@@ -28,5 +28,6 @@ func mouse_distort(delta) -> void:
 		dir = Vector2.ZERO
 	curr_pos += dir.normalized() * (fx_speed * delta)
 
+# Sets the position of the FX
 func set_pos(new_pos: Vector2) -> void:
 	curr_pos = new_pos

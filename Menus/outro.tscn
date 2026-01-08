@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://i38g5n8i6hfr"]
+
+[ext_resource type="Script" uid="uid://demhb50uwlg65" path="res://Menus/outro.gd" id="1_svp7v"]
+[ext_resource type="FontFile" uid="uid://cvu11ev7uko6q" path="res://UI/PrStart.ttf" id="2_f68p8"]
+
+[node name="Outro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_svp7v")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -42.75
+offset_right = 78.0
+offset_bottom = 42.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0.2784314, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0.2784314, 0.49411765)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("2_f68p8")
+text = "Time
+0:00.0"
+horizontal_alignment = 1
+vertical_alignment = 1
