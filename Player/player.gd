@@ -34,9 +34,6 @@ func _physics_process(delta) -> void:
 	_movement(delta)
 	_animation()
 	_lighting()
-	
-	if Input.is_action_just_pressed("ui_accept"):
-		pickup_key()
 
 
 ### Public Methods ###

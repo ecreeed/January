@@ -5,8 +5,8 @@ var target : Player
 @onready var pathfind : NavigationAgent2D = $Pathfind
 @onready var tp = $TP
 
-const speed : int = 2000
-const speed_gain : int = 700
+const speed : int = 2250
+const speed_gain : int = 250
 const tp_base : Vector2 = Vector2(-455, 1505)
 const tp_gap : int = 176
 var _alive : int = 1
