@@ -87,6 +87,7 @@ texture = SubResource("GradientTexture2D_d6qko")
 texture_scale = 6.37
 
 [node name="Darkness" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Tiles" type="Node2D" parent="."]

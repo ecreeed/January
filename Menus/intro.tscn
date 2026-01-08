@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://veugfxxuki"]
+
+[ext_resource type="Script" uid="uid://bl78gsalwegfw" path="res://Menus/intro.gd" id="1_21lqh"]
+[ext_resource type="FontFile" uid="uid://cvu11ev7uko6q" path="res://UI/PrStart.ttf" id="2_ne0pw"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_21lqh")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.138, 0.15246668, 0.2, 1)
+
+[node name="Content" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94, 0.984, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.7, 0.33553332, 0.20300001, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_ne0pw")
+text = "January
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Content"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.9411765, 0.9843137, 1, 1)
+theme_override_fonts/font = ExtResource("2_ne0pw")
+text = "Play"
+
+[connection signal="pressed" from="Content/Button" to="." method="_on_button_pressed"]
